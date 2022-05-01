@@ -1,18 +1,15 @@
 
 # dataset info
-dataset_path: "/srv/home/sonic/FUnIE-GAN/PyTorch/uporp/data/euvp/"
-mix: evolve #paired, unpaired, alternate, evolve, integer (for threshold)
+dataset_path: "/srv/home/sonic/PUPGAN/data/euvp"
+mix: alternate #paired, unpaired, alternate, evolve, integer (for threshold)
 
 # image info
 chans: 3
 im_width: 256
 im_height: 256
+num_paired: 0 #0 for full dataset
 
 # other params
-name: "evolve"
+name: "alternate"
 val_interval: 1 # epochs
 ckpt_interval: 20  # epochs
-
-
-
- 
