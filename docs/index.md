@@ -1,3 +1,5 @@
+# UW PUP GAN
+
 ### Combined paired-unpaired GAN training for underwater image enhancement (UIE)
 *[Sonia Cromp](https://github.com/soCromp), University of Wisconsin-Madison Computer Sciences* <br> <br>
 See [here](resource/cromp_cv_proposal.pdf) for the proposal and [here](resource/cv_midreport.pdf) for the midterm report.
@@ -37,6 +39,7 @@ Combining paired and unpaired: <br>
 <p align="center">
 <img src="imgs/PUP.png" style="width:700px;"/>
 </p>
+The paired and unpaired regimes are combined to create a model with three datasets (one paired, an unpaired clear and unpaired unclear) and six model components. Any given epoch may be specified as conducting either paired or unpaired training.
 
 ## Experiments
 
