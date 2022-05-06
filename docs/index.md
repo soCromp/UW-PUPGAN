@@ -1,9 +1,8 @@
-## UW-PUPGAN
+|                    [Sonia Cromp](https://github.com/soCromp)              |
+|:-------------------------------------------------:|
+| University of Wisconsin-Madison Computer Sciences |
 
 Combined paired-unpaired GAN training for underwater image enhancement (UIE)
 
-Please find the codebase [here](https://github.com/soCromp/UW-PUPGAN)
-
 ### Examples
-<!-- ![Image](imgs/scuba.png) -->
-<img src="imgs/scuba.png" style="width:300px;"/>
+<img src="imgs/imgs2.png" style="width:300px;"/>
