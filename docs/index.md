@@ -53,11 +53,51 @@ The training logs looked as follows:
 In the paired regime, I always encountered an issue where the paired clear discriminator DPc hit near-zero loss. I was unsure as how to rectify this issue, but a solution may provide more stable training and better results. The evolutions of the other components' losses appear relatively typical for adversarial training, where improvements in one component pose challenges for the adversarial component.
 
 ## Results
-Here are several images from the alternating scheme and a paired dataset of just 1000 examples (top row is unclear and bottom row is the generated clear image):
+(top row is unclear and bottom row is the generated clear image)
+
+### CycleGAN, full unpaired dataset
 <p align="center">
-<img src="imgs/imgs1.png" style="width:300px;"/>
-<img src="imgs/imgs2.png" style="width:300px;"/>
+<img src="imgs/cycle1.png" style="width:300px;"/>
+<img src="imgs/cycle2.png" style="width:300px;"/>
 </p>
+CycleGAN requires approximately two days to train, while FUnIE GAN (and by extension UW PUP GAN) are designed to be lighter-weight and trains in about six hours on an Euler Cluster GPU.
+
+### Paired, full dataset
+<p align="center">
+<img src="imgs/p1.png" style="width:300px;"/>
+<img src="imgs/p2.png" style="width:300px;"/>
+</p>
+
+### Unpaired, full dataset
+<p align="center">
+<img src="imgs/up1.png" style="width:300px;"/>
+<img src="imgs/up2.png" style="width:300px;"/>
+</p>
+
+### 1000 paired and full unpaired, alternating scheme
+<p align="center">
+<img src="imgs/al1k1.png" style="width:300px;"/>
+<img src="imgs/al1k2.png" style="width:300px;"/>
+</p>
+
+### 1000 paired and full unpaired, evolving scheme
+<p align="center">
+<img src="imgs/ev1k1.png" style="width:300px;"/>
+<img src="imgs/ev1k2.png" style="width:300px;"/>
+</p>
+
+### 5000 paired and full unpaired, alternating scheme
+<p align="center">
+<img src="imgs/al5k1.png" style="width:300px;"/>
+<img src="imgs/al5k2.png" style="width:300px;"/>
+</p>
+
+### 5000 paired and full unpaired, evolving scheme
+<p align="center">
+<img src="imgs/ev5k1.png" style="width:300px;"/>
+<img src="imgs/ev5k2.png" style="width:300px;"/>
+</p>
+
 
 ## Future work
 
