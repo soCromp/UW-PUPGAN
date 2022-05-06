@@ -13,7 +13,7 @@ One line of prior work focuses on applying unpaired learning techniques to UIE. 
 
 In the present work, I propose UW PUP GAN (UnderWater / University of Wisconsin) Paired-or-UnPaired Generative Adversarial Network, which fuses paired and unpaired learning techniques. The anticipated use-case is a situation where relatively large quantities of unpaired unclear and clear examples are available, along with a smaller paired dataset. For instance, perhaps a research group has a limited time or budget to manually enhance a small number of unclear images and wishes to aid the learning of this dataset with unpaired images. To my knowledge, this is the first UIE work to combine paired and unpaired learning.
 
-UW PUP GAN is inspired by a combination of the paired and unpaired versions of FUnIE-GAN, which in turn also draws inspiration from CycleGAN. In the procress of this project, I created a PyTorch implementation of FUnIE-GAN that is available here LINK.
+UW PUP GAN is inspired by a combination of the paired and unpaired versions of [FUnIE-GAN](https://github.com/xahidbuffon/FUnIE-GAN) (Islam et al. 2020), which in turn also draws inspiration from [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) (Zhu et al. 2020). In the procress of this project, I created a PyTorch implementation of FUnIE-GAN that is equivalent to training UW PUP GAN on unpaired data only.
 
 ## Approach
 Overview of the paired training regime: <br>
