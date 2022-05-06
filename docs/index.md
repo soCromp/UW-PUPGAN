@@ -43,11 +43,27 @@ The paired and unpaired regimes are combined to create a model with three datase
 
 ## Experiments
 
+I experiment with training under a solely paired or unpaired regime, with alternating between epochs and with a paired/unpaired learning scheme that evolves over time. Specifically, for the evolving learning scheme, all epochs start as paired training. Gradually, the probability of unpaired epochs increases until there is a 50% of unpaired learning halfway through the total number of epochs (200) and a 100% chance of unpaired learning at the last epoch. For the *i*-th epoch out out *T* epochs total, I draw one sample from a binomial distribution with *i/T* probability of success. <br>
+I also evaluated the paired, alternating and evolving schemes with a paired dataset containing 1000, 5000 or the full 11,000 examples. The employed dataset is EUVP CITE. <br> <br>
+
+The training logs looked as follows:
+<p align="center">
+<img src="imgs/pairedloss.png" style="width:300px;"/>
+<img src="imgs/unpairedloss.png" style="width:300px;"/>
+</p>
+In the paired regime, I always encountered an issue where the paired clear discriminator DPc hit near-zero loss. I was unsure as how to rectify this issue, but a solution may provide more stable training and better results. The evolutions of the other components' losses appear relatively typical for adversarial training, where improvements in one component pose challenges for the adversarial component.
+
 ## Results
+Here are several images from the alternating scheme and a paired dataset of just 1000 examples (top row is unclear and bottom row is the generated clear image):
+<p align="center">
+<img src="imgs/imgs1.png" style="width:300px;"/>
 <img src="imgs/imgs2.png" style="width:300px;"/>
+</p>
 
 ## Future work
 
-**Acknowledgement**
+While there are some metrics for quantitatively assessing image quality in paired learning regimes, none to-date are seemingly designed for the unpaired regime. As such, the development of a metric that works for models trained with paired and/or unpaired data may aid progress in this line of research.
+
+**Acknowledgement**: Thank you to the [Wisconsin Applied Computing Center](https://wacc.wisc.edu/)'s Euler Cluster and its administrator, Colin Vanden Heuvel, for compute resources!
 
 ## Sources
