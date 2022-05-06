@@ -1,6 +1,3 @@
-
-# UW PUP GAN
-
 ### Combined paired-unpaired GAN training for underwater image enhancement (UIE)
 *[Sonia Cromp](https://github.com/soCromp), University of Wisconsin-Madison Computer Sciences* <br> <br>
 See [here](resource/presentation.pdf) for the final presentation, [here](resource/cromp_cv_proposal.pdf) for the proposal and [here](resource/cv_midreport.pdf) for the midterm report.
