@@ -1,4 +1,6 @@
 
+# UW PUP GAN
+
 ### Combined paired-unpaired GAN training for underwater image enhancement (UIE)
 *[Sonia Cromp](https://github.com/soCromp), University of Wisconsin-Madison Computer Sciences* <br> <br>
 See [here](resource/presentation.pdf) for the final presentation, [here](resource/cromp_cv_proposal.pdf) for the proposal and [here](resource/cv_midreport.pdf) for the midterm report.
@@ -45,7 +47,7 @@ The paired and unpaired regimes are combined to create a model with three datase
 I experiment with training under a solely paired or unpaired regime, with alternating between epochs and with a paired/unpaired learning scheme that evolves over time. Specifically, for the evolving learning scheme, all epochs start as paired training. Gradually, the probability of unpaired epochs increases until there is a 50% of unpaired learning halfway through the total number of epochs (150) and a 100% chance of unpaired learning at the last epoch. For the *i*-th epoch out out *T* epochs total, I draw one sample from a binomial distribution with *i/T* probability of success. <br>
 I also evaluated the paired, alternating and evolving schemes with a paired dataset containing 1000, 5000 or the full 11,000 examples. The employed dataset is EUVP CITE. <br> <br>
 
-The training logs looked as follows:
+The training losses develop as follows:
 <p align="center">
 <img src="imgs/pairedloss.png" style="width:300px;"/>
 <img src="imgs/unpairedloss.png" style="width:300px;"/>
@@ -106,3 +108,50 @@ While there are some metrics for quantitatively assessing image quality in paire
 **Acknowledgement**: Thank you to the [Wisconsin Applied Computing Center](https://wacc.wisc.edu/)'s Euler Cluster and its administrator, Colin Vanden Heuvel, for compute resources!
 
 ## Sources
+Martín Abadi et al. TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems.
+Software available from tensorflow.org. 2015. url: https://www.tensorflow.org/.
+<br><br>Saeed Anwar and Chongyi Li. “Diving deeper into underwater image enhancement: A survey”.
+In: Signal Processing: Image Communication 89 (2020), p. 115978.
+<br><br>Mu Cai et al. “Frequency domain image translation: More photo-realistic, better identity-
+preserving”. In: Proceedings of the IEEE/CVF International Conference on Computer Vision.
+2021, pp. 13930–13940.
+<br><br>Keming Cao, Yan-Tsung Peng, and Pamela C Cosman. “Underwater image restoration us-
+ing deep networks to estimate background light and scene depth”. In: 2018 IEEE Southwest
+Symposium on Image Analysis and Interpretation (SSIAI). IEEE. 2018, pp. 1–4
+<br><br>John Y Chiang and Ying-Ching Chen. “Underwater image enhancement by wavelength com-
+pensation and dehazing”. In: IEEE transactions on image processing 21.4 (2011), pp. 1756–
+1769.
+<br><br>Ian Goodfellow et al. “Generative adversarial nets”. In: Advances in neural information processing systems 27 (2014).
+<br><br>Vu Cong Duy Hoang et al. “Iterative back-translation for neural machine translation”. In:
+Proceedings of the 2nd Workshop on Neural Machine Translation and Generation. 2018, pp. 18–
+24.
+<br><br>Kaiming He, Jian Sun, and Xiaoou Tang. “Single image haze removal using dark channel prior”. In: IEEE transactions on pattern analysis and machine intelligence 33.12 (2010), pp. 2341–
+2353.
+<br><br>Md Jahidul Islam, Youya Xia, and Junaed Sattar. Fast Underwater Image Enhancement for
+Improved Visual Perception. 2019. doi: 10.48550/ARXIV.1903.09766. url: https://arxiv.
+org/abs/1903.09766.
+<br><br>Phillip Isola et al. “Image-to-image translation with conditional adversarial networks”. In: Proceedings of the IEEE conference on computer vision and pattern recognition. 2017, pp. 1125–
+1134.
+<br><br>Muwei Jian et al. “Underwater image processing and analysis: A review”. In: Signal Processing:
+Image Communication 91 (2021), p. 116088.
+<br><br>Chau Yi Li and Andrea Cavallaro. “Background light estimation for depth-dependent under-
+water image restoration”. In: 2018 25th IEEE International Conference on Image Processing
+(ICIP). IEEE. 2018, pp. 1528–1532.
+<br><br>Chongyi Li, Jichang Guo, and Chunle Guo. “Emerging from water: Underwater image color
+correction based on weakly supervised color transfer”. In: IEEE Signal processing letters 25.3
+(2018), pp. 323–327.
+<br><br>Jingyu Lu et al. “Multi-scale adversarial network for underwater image restoration”. In: Optics & Laser Technology 110 (2019), pp. 105–113.
+<br><br>Karen Panetta, Chen Gao, and Sos Agaian. “Human-visual-system-inspired underwater image
+quality measures”. In: IEEE Journal of Oceanic Engineering 41.3 (2015), pp. 541–551.
+<br><br>Adam Paszke et al. “Pytorch: An imperative style, high-performance deep learning library”.
+In: Advances in neural information processing systems 32 (2019).
+<br><br>Olaf Ronneberger, Philipp Fischer, and Thomas Brox. “U-net: Convolutional networks for
+biomedical image segmentation”. In: International Conference on Medical image computing
+and computer-assisted intervention. Springer. 2015, pp. 234–241.
+<br><br>Xin Sun et al. “Deep pixel-to-pixel network for underwater image enhancement and restora-
+tion”. In: IET Image Processing 13.3 (2019), pp. 469–474.
+<br><br>Jun-Yan Zhu et al. Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial
+Networks. 2017. doi: 10.48550/ARXIV.1703.10593. url: https://arxiv.org/abs/1703.
+10593.
+<br><br>Miao Yang and Arcot Sowmya. “An underwater color image quality evaluation metric”. In:
+IEEE Transactions on Image Processing 24.12 (2015), pp. 6062–6071.
