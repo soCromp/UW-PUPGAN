@@ -1,7 +1,7 @@
 
 ### Combined paired-unpaired GAN training for underwater image enhancement (UIE)
 *[Sonia Cromp](https://github.com/soCromp), University of Wisconsin-Madison Computer Sciences* <br> <br>
-See [here](resource/cromp_cv_proposal.pdf) for the proposal and [here](resource/cv_midreport.pdf) for the midterm report.
+See [here](resource/presentation.pdf) for the final presentation, [here](resource/cromp_cv_proposal.pdf) for the proposal and [here](resource/cv_midreport.pdf) for the midterm report.
 
 ## Introduction
 
@@ -42,7 +42,7 @@ The paired and unpaired regimes are combined to create a model with three datase
 
 ## Experiments
 
-I experiment with training under a solely paired or unpaired regime, with alternating between epochs and with a paired/unpaired learning scheme that evolves over time. Specifically, for the evolving learning scheme, all epochs start as paired training. Gradually, the probability of unpaired epochs increases until there is a 50% of unpaired learning halfway through the total number of epochs (200) and a 100% chance of unpaired learning at the last epoch. For the *i*-th epoch out out *T* epochs total, I draw one sample from a binomial distribution with *i/T* probability of success. <br>
+I experiment with training under a solely paired or unpaired regime, with alternating between epochs and with a paired/unpaired learning scheme that evolves over time. Specifically, for the evolving learning scheme, all epochs start as paired training. Gradually, the probability of unpaired epochs increases until there is a 50% of unpaired learning halfway through the total number of epochs (150) and a 100% chance of unpaired learning at the last epoch. For the *i*-th epoch out out *T* epochs total, I draw one sample from a binomial distribution with *i/T* probability of success. <br>
 I also evaluated the paired, alternating and evolving schemes with a paired dataset containing 1000, 5000 or the full 11,000 examples. The employed dataset is EUVP CITE. <br> <br>
 
 The training logs looked as follows:
@@ -57,45 +57,45 @@ In the paired regime, I always encountered an issue where the paired clear discr
 
 ### CycleGAN, full unpaired dataset
 <p align="center">
-<img src="imgs/cycle1.png" style="width:300px;"/>
-<img src="imgs/cycle2.png" style="width:300px;"/>
+<img src="imgs/cycle1.png" style="width:800px;"/>
+<img src="imgs/cycle2.png" style="width:800px;"/>
 </p>
-CycleGAN requires approximately two days to train, while FUnIE GAN (and by extension UW PUP GAN) are designed to be lighter-weight and trains in about six hours on an Euler Cluster GPU.
+CycleGAN requires approximately two days to train 200 epochs, while FUnIE GAN (and by extension UW PUP GAN) are designed to be lighter-weight and trains 150 epochs in about six hours on an Euler Cluster GPU.
 
 ### Paired, full dataset
 <p align="center">
-<img src="imgs/p1.png" style="width:300px;"/>
-<img src="imgs/p2.png" style="width:300px;"/>
+<img src="imgs/p1.png" style="width:800px;"/>
+<img src="imgs/p2.png" style="width:800px;"/>
 </p>
 
 ### Unpaired, full dataset
 <p align="center">
-<img src="imgs/up1.png" style="width:300px;"/>
-<img src="imgs/up2.png" style="width:300px;"/>
+<img src="imgs/up1.png" style="width:800px;"/>
+<img src="imgs/up2.png" style="width:800px;"/>
 </p>
 
 ### 1000 paired and full unpaired, alternating scheme
 <p align="center">
-<img src="imgs/al1k1.png" style="width:300px;"/>
-<img src="imgs/al1k2.png" style="width:300px;"/>
+<img src="imgs/al1k1.png" style="width:800px;"/>
+<img src="imgs/al1k2.png" style="width:800px;"/>
 </p>
 
 ### 1000 paired and full unpaired, evolving scheme
 <p align="center">
-<img src="imgs/ev1k1.png" style="width:300px;"/>
-<img src="imgs/ev1k2.png" style="width:300px;"/>
+<img src="imgs/ev1k1.png" style="width:800px;"/>
+<img src="imgs/ev1k2.png" style="width:800px;"/>
 </p>
 
 ### 5000 paired and full unpaired, alternating scheme
 <p align="center">
-<img src="imgs/al5k1.png" style="width:300px;"/>
-<img src="imgs/al5k2.png" style="width:300px;"/>
+<img src="imgs/al5k1.png" style="width:800px;"/>
+<img src="imgs/al5k2.png" style="width:800px;"/>
 </p>
 
 ### 5000 paired and full unpaired, evolving scheme
 <p align="center">
-<img src="imgs/ev5k1.png" style="width:300px;"/>
-<img src="imgs/ev5k2.png" style="width:300px;"/>
+<img src="imgs/ev5k1.png" style="width:800px;"/>
+<img src="imgs/ev5k2.png" style="width:800px;"/>
 </p>
 
 
