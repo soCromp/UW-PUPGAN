@@ -14,13 +14,19 @@ UW PUP GAN is inspired by a combination of the paired and unpaired versions of F
 
 ## Approach
 Overview of the paired training regime: <br>
+<p align="center">
 <img src="imgs/Paired.png" style="width:500px;"/>
+</p>
 
 Overview of the unpaired training regime: <br>
+<p align="center">
 <img src="imgs/Unpaired.png" style="width:500px;"/>
+</p>
 
 Combining paired and unpaired: <br>
+<p align="center">
 <img src="imgs/PUP.png" style="width:500px;"/>
+</p>
 
 ## Experiments
 
